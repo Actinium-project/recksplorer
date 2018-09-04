@@ -70,8 +70,8 @@ class DataStore {
     }
 
     fetchPrice() {
-        Axios.get('https://blockchain.info/ticker').then((result) => {
-            this.usdbtc = result.data.USD.last;
+        Axios.get('https://api.actinium.org/v1/acm/fiatprice').then((result) => {
+            this.usdbtc = result.data.USD;
         });
     }
 }
